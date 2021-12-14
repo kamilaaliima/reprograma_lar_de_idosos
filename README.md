@@ -41,7 +41,7 @@ O projeto final consiste em uma API fundamentada no CRUD, que são: CREATE (CRIA
 
 Para a construção do projeto, as seguintes tecnologias foram utilizadas:
 
-JavaScript /t
+JavaScript
 Git/Github
 Node.js
 MongoDb
