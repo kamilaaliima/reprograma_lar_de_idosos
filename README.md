@@ -1,43 +1,60 @@
-# reprograma_lar_de_idosos
-Projeto final turma on14 Back-end. 
+<h1 align="center"> Reprograma - projeto para Lar de Idosos </h1>
+
 
 <img src="./src/assets/casacanva.png" width="100%">
 
 
-Sumário
-Apresentação
-Descrição da API
-Funcionalidades
-Aprendizados
-Tecnologias
-Instruções para instalação e contribuições no projeto
-Features e rotas
-Referências
+## Sumário  
+
+
+* [Apresentação](#apresentação)
+* [Descrição da API](#descrição-da-api)
+* [Funcionalidades](#funcionalidades)
+* [Aprendizados](#aprendizados)
+* [Tecnologias utilizadas](#tecnologias-utilizadas)
+* [Arquitetura MVC](#arquitetura-mvc)
+* [Como rodar o projeto](#como-rodar-o-projeto)
+* [Rotas](#rotas)
+* [Referências](#referencias)
+* [Conclusão](#conclusao)
 
 
 
-💻 Apresentação
+
+## 💻 Apresentação
+
+<br>
+
+<p align="justify">API desenvolvida como projeto final para conclusão do bootcamp de Backend da {Reprograma}. 
+
+<p align="justify">Sempre tive uma ligação com pessoas idosas, parte disso por ter sido criada pela minha avó, então surgiu a vontade de criar esse projeto em prol de ajudar instituições, casas para idosos, que no seu dia dia dependam de ajuda voluntária e de doações. 
+
+<br><br>
 
 
+## 🚀 Descrição da API 
+
+<p align="justify">Essa API visa otimizar a organização dos dados das instituições, (....)
 
 
-
-🚀 Descrição da API 
-
+## 🔗 Link
 
 
-🔗 Link
+<br><br>
+
+## ⚙️ Funcionalidades
 
 
-⚙️ Funcionalidades
+<br><br>
+
+## 📚 Aprendizados
+
+<p align="justify"> O projeto final consiste em uma API fundamentada no CRUD, que são: CREATE (CRIAR), READ(LER-CONSULTA), UPDATE(ATUALIZAR) e DELETE(DESTRUIÇÃO).
+
+<br><br>
 
 
-
-📚 Aprendizados
-O projeto final consiste em uma API fundamentada no CRUD, que são: CREATE (CRIAR), READ(LER-CONSULTA), UPDATE(ATUALIZAR) e DELETE(DESTRUIÇÃO).
-
-
-🛠️ Tecnologias utilizadas nesse projeto
+## 🛠️ Tecnologias utilizadas nesse projeto
 
 Para a construção do projeto, as seguintes tecnologias foram utilizadas:
 
@@ -114,6 +131,12 @@ Utilize o Postman ou Insomnia para para chamar e testar os endpoints da API loca
 Swagger - Heroku: 
 
 
+📚 Referências
+
+https://dev.to/reginadiana/como-escrever-um-readme-md-sensacional-no-github-4509#o-que-%C3%A9-o-readme
 
 
-👨‍💻 Autora
+🚧 Projeto em Construção (futuras melhorias)
+
+
+👨‍💻 Criado por Kamila lima, com muito carinho e muita ajuda das professoras, monitoras, facilitadora e amigas da turma On14. :hearts:

@@ -1,15 +1,15 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
 
 const MONGODB_URI = process.env.MONGODB_URI
 
 const connect = async () => {
-    try {
+    try{
         await mongoose.connect(MONGODB_URI,{
             useNewUrlParser: true,
             useUnifiedTopology: true
         })
-        console.log("Banco conectado :)")
-    } catch (error) {
+        console.log("Banco conectado com sucesso :)")
+    }catch (error) {
         console.log("Erro: ", error.message)
     }
 }
@@ -17,4 +17,3 @@ const connect = async () => {
 module.exports = {
     connect
 }
-
