@@ -139,4 +139,8 @@ https://dev.to/reginadiana/como-escrever-um-readme-md-sensacional-no-github-4509
 🚧 Projeto em Construção (futuras melhorias)
 
 
+<<<<<<< HEAD
 👨‍💻 Criado por Kamila lima, com muito carinho e muita ajuda das professoras, monitoras, facilitadora e amigas da turma On14. :hearts:
+=======
+👨‍💻 Autora
+>>>>>>> ff23876eeba5cc5d02e9d467da5f6ae2a62a1529
