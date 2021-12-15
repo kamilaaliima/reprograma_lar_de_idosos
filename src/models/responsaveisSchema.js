@@ -36,4 +36,4 @@ const responsaveisSchema = new mongoose.Schema({
     },
 });
 
-module.exports = mongoose.models("responsavel", responsaveisSchema)
+module.exports = mongoose.model("responsaveis", responsaveisSchema)

@@ -1,4 +1,5 @@
-const Responsaveis = require("../models/responsaveisSchema")
+const Responsaveis = require("../models/responsaveisSchema");
+
 
 const cadastrarResponsaveis = async (request, response) => {
     try {
@@ -11,7 +12,6 @@ const cadastrarResponsaveis = async (request, response) => {
         return response.status(400).send({message: error.message})
     }
 }
-
 
 
 const getAll = async (request, response) => {

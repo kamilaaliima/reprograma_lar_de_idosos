@@ -40,4 +40,4 @@ const voluntariosSchema = new mongoose.Schema({
 
 });
 
-module.exports = mongoose.models("voluntario", voluntariosSchema)
+module.exports = mongoose.model("voluntarios", voluntariosSchema)

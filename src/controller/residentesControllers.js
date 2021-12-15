@@ -1,4 +1,5 @@
-const Residentes = require("../models/residentesSchema")
+const Residentes = require("../models/residentesSchema");
+const mongoose = require("mongoose");
 
 const cadastrarResidentes = async (request, response) => {
     try {

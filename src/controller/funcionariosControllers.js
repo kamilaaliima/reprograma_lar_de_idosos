@@ -1,5 +1,5 @@
-const { request } = require("express")
-const Funcionarios = require("../models/funcionariosSchema")
+const Funcionarios = require("../models/funcionariosSchema");
+const mongoose = require("mongoose");
 
 const cadastrarFuncionario = async (request, response) => {
     try {

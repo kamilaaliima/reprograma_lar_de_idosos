@@ -1,4 +1,4 @@
-const mongoose = require("mongoose"); //conectar com o banco
+const mongoose = require("mongoose")
 
 const residentesSchema = new mongoose.Schema({
     _id: {
@@ -35,4 +35,4 @@ const residentesSchema = new mongoose.Schema({
 
 });
 
-module.exports = mongoose.models("residente", residentesSchema)
+module.exports = mongoose.model("residentes", residentesSchema)

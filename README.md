@@ -1,14 +1,13 @@
 <h1 align="center"> Reprograma - projeto para Lar de Idosos </h1>
 
 
-<img src="./src/assets/casacanva.png" width="100%">
+<img src="./src/assets/casacanva1.png" width="100%">
 
 
 ## Sumário  
 
 
 * [Apresentação](#apresentação)
-* [Descrição da API](#descrição-da-api)
 * [Funcionalidades](#funcionalidades)
 * [Aprendizados](#aprendizados)
 * [Tecnologias utilizadas](#tecnologias-utilizadas)
@@ -29,12 +28,10 @@
 
 <p align="justify">Sempre tive uma ligação com pessoas idosas, parte disso por ter sido criada pela minha avó, então surgiu a vontade de criar esse projeto em prol de ajudar instituições, casas para idosos, que no seu dia dia dependam de ajuda voluntária e de doações. 
 
+<p align="justify">Essa API visa otimizar a organização dos dados das instituições, levando mais segurança por meio dos registros dos idosos residentes, resposáveis, funcionários, voluntários da casa e visitantes. 
+
+
 <br><br>
-
-
-## 🚀 Descrição da API 
-
-<p align="justify">Essa API visa otimizar a organização dos dados das instituições, (....)
 
 
 ## 🔗 Link
@@ -44,45 +41,52 @@
 
 ## ⚙️ Funcionalidades
 
+- Cadastro dos idosos residentes, seus responsáveis, funcionários, voluntário e visitantes;
+- Registro dos horários e data de visita;
+- Registro do horários dos funcionários e voluntários;
+- Simplificar o dia a dia da instituição levando segurança aos que moram e trabalham nela;
 
 <br><br>
 
 ## 📚 Aprendizados
 
-<p align="justify"> O projeto final consiste em uma API fundamentada no CRUD, que são: CREATE (CRIAR), READ(LER-CONSULTA), UPDATE(ATUALIZAR) e DELETE(DESTRUIÇÃO).
+<p align="justify"> Este projeto final consiste em uma API fundamentada no CRUD, que são: CREATE (CRIAR), READ (LER), UPDATE (ATUALIZAR) e DELETE (DELETAR).
 
 <br><br>
 
 
-## 🛠️ Tecnologias utilizadas nesse projeto
+## 🛠️ Tecnologias Utilizadas
 
-Para a construção do projeto, as seguintes tecnologias foram utilizadas:
+- [JavaScript](https://www.javascript.com/)
+- [Git/Github](https://github.com/)
+- [Node.js](https://nodejs.org/en/)
+- [MongoDb](https://www.mongodb.com/)
+- [MongoCompass](https://www.mongodb.com/pt-br/products/compass)
+- [MongoDBatlas](https://www.mongodb.com/cloud/atlas)
+- [Postman](https://www.postman.com/)
+- [Vscode](https://code.visualstudio.com/)
+- [heroku](https://dashboard.heroku.com/apps)  
 
-JavaScript
-Git/Github
-Node.js
-MongoDb
-MongoCompass
-MongoDBatlas
-Postman
-Vscode
-heroku
+### Bibliotecas Aplicadas
 
-Pacotes Utilizados:
-Express
-Nodemon
-dotenv
-Mongoose
-cors
-modemon
-swagger-ui-express
+- [Express](https://expressjs.com/pt-br/)
+- [Nodemon](https://nodemon.io/)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [Mongoose](https://mongoosejs.com/)
+- [cors](https://www.npmjs.com/package/cors)
+- [modemon](https://www.npmjs.com/package/nodemon)
 
-📁 Arquitetura MVC
+<br>
+
+
+## 📁 Arquitetura MVC
+
+```
  📁 reprograma_lar_de_idosos
    |
    |-  📁 src
    |    |
-   |    |- 📁 controllers
+   |    |- 📁 controller
    |         |- 📑 residentesControllers.js
    |         |- 📑 funcionariosControllers.js
    |         |- 📑 voluntariosControllers.js 
@@ -106,8 +110,9 @@ swagger-ui-express
    |         |- 📑 responsaveisRoutes.js 
    |         |- 📑 voluntatiosRoutes.js 
    |         |- 📑 visitantesRoutes.js 
-   
+   |
    |    |- 📑 app.js
+   |    |- 📑 swagger.json
    |
    |
    |- 📑 .env
@@ -119,28 +124,50 @@ swagger-ui-express
    |- 📑 README.md
    |- 📑 server.js
 
+```
+<br>
 
-🔃 Rotas
-local: http://localhost:8084
+## 🔃 Rotas
 
-Heroku: 
+* local: http://localhost:8084
 
-Utilize o Postman ou Insomnia para para chamar e testar os endpoints da API localmente ou via Heroku.
+* Heroku:
 
-🔃 Retorna a documentação no swagger
-Swagger - Heroku: 
+    * Utilize o [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/download/) para para chamar e testar os endpoints da API localmente ou via Heroku
 
-
-📚 Referências
-
-https://dev.to/reginadiana/como-escrever-um-readme-md-sensacional-no-github-4509#o-que-%C3%A9-o-readme
+<br>
 
 
-🚧 Projeto em Construção (futuras melhorias)
+## 🔃 Manipulação das Rotas de residentes:
+
+| Método HTTP  | Endpoint                | Descrição                            |
+| ------------ | ----------------------- | ------------------------------------ |
+| GET          | `/residentes`           | Retorna todos residentes             |
+| GET          | `/nome`                 | Retorna  específico por nome    
+| GET          | `//:id`          | Retorna  específico por id      |
+| POST         | `//cadastrar`    | Cria/cadastra um novo           |
+| PUT          | `//:id`          | Altera informações de um        |
+| DELET        | `//:id`          | Remove um  específico           |
+
+<br>
 
 
-<<<<<<< HEAD
-👨‍💻 Criado por Kamila lima, com muito carinho e muita ajuda das professoras, monitoras, facilitadora e amigas da turma On14. :hearts:
-=======
-👨‍💻 Autora
->>>>>>> ff23876eeba5cc5d02e9d467da5f6ae2a62a1529
+## 🚧 Projeto em Construção (futuras melhorias)
+
+<br>
+
+### Minhas Redes
+
+- [LinkedIn](gfhgh)
+- [GitHub]()
+
+###  💜 
+ 
+<br> 
+    
+## 📝 Licença
+
+Este projeto esta sob a licença [MIT](./LICENSE).
+    
+    
+    

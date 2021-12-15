@@ -1,4 +1,5 @@
-const Visitantes = require("../models/visitantesSchema")
+const Visitantes = require("../models/visitantesSchema");
+const mongoose = require("mongoose");
 
 const cadastrarVisitantes = async (request, response) => {
     try {

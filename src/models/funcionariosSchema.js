@@ -1,4 +1,4 @@
-const mongoose = require("mongoose"); //conectar com o banco
+const mongoose = require("mongoose");
 
 const funcionariosSchema = new mongoose.Schema({
     _id: {
@@ -51,4 +51,4 @@ const funcionariosSchema = new mongoose.Schema({
 
 });
 
-module.exports = mongoose.models("funcionarios", funcionariosSchema)
+module.exports = mongoose.model("funcionarios", funcionariosSchema)
