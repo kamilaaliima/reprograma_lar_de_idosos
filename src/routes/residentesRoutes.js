@@ -9,7 +9,7 @@ router.get("/residentes/:id", controller.getById)
 
 router.post("/residentes/cadastrar", controller.cadastrarResidentes)
 
-router.patch("/residentes/update/:id", controller.alterarResidente)
+router.put("/residentes/update/:id", controller.alterarResidente)
 
 router.delete("/residentes/delete/:id", controller.deleteById)
 

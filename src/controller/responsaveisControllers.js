@@ -52,8 +52,11 @@ const getById = async (request, response) => {
 
 
 const atualizarResponsavel = async (request, response) => {
+    
+        
     try {
         const responsavel = await Responsaveis.findById(request.params.id);
+
         if (responsavel) {
           
             responsavel.nome = request.body.nome || responsavel.nome

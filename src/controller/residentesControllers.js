@@ -31,9 +31,9 @@ const getAll = async (request, response) => {
 
 const pesquisarPorNome = async (request, response) =>{
     
-        
+       
         const nome = request.query.nome
-        const residente = await Residentes.find(nome)
+        const residente = await Residentes.find({nome: nome})
 
         return response.status(200).json(residente)
 
@@ -60,6 +60,7 @@ const getById = async (request, response) => {
 const alterarResidente = async (request, response) => {
     try {
         const residente = await Residentes.findById(request.params.id);
+
         if (residente) {
           
             residente.nome = request.body.nome || residente.nome

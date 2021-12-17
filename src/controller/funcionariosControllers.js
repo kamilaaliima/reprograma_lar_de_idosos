@@ -89,6 +89,8 @@ const atualizarFuncionario = async (request, response) => {
 
 const deleteById = async (request, response) => {
     try {
+
+        console.log("chegou");
         const funcionario = await Funcionarios.findById(request.params.id)
         console.log(funcionario);
 

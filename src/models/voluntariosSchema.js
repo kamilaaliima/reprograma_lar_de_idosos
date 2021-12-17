@@ -22,7 +22,7 @@ const voluntariosSchema = new mongoose.Schema({
         required:true, 
         lowercase: true
     },
-    endereço: {
+    endereco: {
         type: String,
         required: true
     },

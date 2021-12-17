@@ -54,6 +54,8 @@ const getById = async (request, response) => {
 
 const updateById = async (request, response) => {
     try {
+
+        console.log("chegou em visitante");
         const visitantes = await Visitantes.findById(request.params.id);
         if (visitantes) {
           

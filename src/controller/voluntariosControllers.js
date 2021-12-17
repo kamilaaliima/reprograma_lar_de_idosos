@@ -51,7 +51,9 @@ const getById = async (request, response) => {
     }
 }
 
-const atualizarVoluntario = async (request, response) => {
+const updateById = async (request, response) => {
+  
+  console.log("chegou");
     try {
         const voluntario = await Voluntarios.findById(request.params.id);
         if (voluntario) {
@@ -102,6 +104,6 @@ module.exports = {
     getAll,
     getByName,
     getById,
-    atualizarVoluntario,
+    updateById,
     deleteById
 }
