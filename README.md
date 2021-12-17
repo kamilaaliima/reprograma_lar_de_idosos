@@ -1,7 +1,7 @@
 <h1 align="center"> Reprograma - projeto para Lar de Idosos </h1>
 
 
-<img src="./src/assets/casacanva1.png" width="100%">
+<img src="./assets/casacanva1.png" width="100%">
 
 
 ## Sumário  
