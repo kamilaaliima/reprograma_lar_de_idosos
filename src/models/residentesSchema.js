@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-const { stringify } = require("nodemon/lib/utils");
 
 const residentesSchema = new mongoose.Schema({
     id: mongoose.Schema.Types.ObjectId,
+    
     nome: {
         type: String,
         required: true
