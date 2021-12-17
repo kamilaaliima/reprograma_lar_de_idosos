@@ -138,13 +138,53 @@
 ```
 <br>
 
-## 🔃 Rotas
+
+## ⚙️ **Instruções para Instalação**
+
+- Faça um `fork` do projeto através do link (<https://github.com/kamilaaliima/reprograma_lar_de_idosos/fork>);
+
+- Copie o código do _fork_ realizado e, no Git Bash Here da sua máquina, realize o clone do projeto através do `git clone <link_do_fork_do_repositorio>`;
+
+- Crie uma _branch_ para realizar suas contribuições `git checkout -b feature/<sua_branch>`;
+
+- Entre na pasta da API Lar De Idosos;
+
+- Instale as dependências necessárias à execução da API através do comando `npm install`;
+
+- Para executar a API, utilize o comando `npm start` no seu terminal;
+
+- Caso faça contribuições no projeto, realize o _commit_ com o comando `git commit -m 'sua mensagem'`;
+
+- Para subir o projeto no seu GitHub, basta executar o comando `git push origin feature/<sua_branch>`;
+
+- E finalize solicitando um _Pull Request_ com as contribuições para o projeto original.
+
+
+## 🔃 **Rotas**
+
+Esta API está sendo escutada na `porta 8084`.
+
+
+## 🚪 Portas
 
 * local: http://localhost:8084
 
+## Opções de Portas
+
+* Local: http://localhost:8084 - (rodando localmente)
+
+* Heroku: https://reprograma-lar-de-idoso.herokuapp.com/- (consumir API)
 * Heroku:
 
     * Utilize o [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/download/) para para chamar e testar os endpoints da API localmente ou via Heroku
+
+<br>
+
+### 🔃 Retorna teste com apresentação 
+
+| Método HTTP  | Tipo Rota | Endpoint                     | Descrição                            |
+| ------------ | --------- | ---------------------------- | ------------------------------------ |
+| GET          | Pública   | `http://localhost:8084/`     |  Mensagem de apresentação (Index)    |             
 
 <br>
 
@@ -154,31 +194,158 @@
 | Método HTTP  | Endpoint                | Descrição                            |
 | ------------ | ----------------------- | ------------------------------------ |
 | GET          | `/residentes`           | Retorna todos residentes             |
-| GET          | `/nome`                 | Retorna  específico por nome    
-| GET          | `//:id`          | Retorna  específico por id      |
-| POST         | `//cadastrar`    | Cria/cadastra um novo           |
-| PUT          | `//:id`          | Altera informações de um        |
-| DELET        | `//:id`          | Remove um  específico           |
+| GET          | `/nome`                 | Retorna residente específico por nome    
+| GET          | `//:id`          | Retorna residente específico por id      |
+| POST         | `//cadastrar`    | Cria/cadastra um residente novo           |
+| PUT          | `//:id`          | Altera informações de um residente       |
+| DELET        | `//:id`          | Remove um residente específico           |
+
+<br>
+
+## 🔃 Manipulação das Rotas de Funcionários:
+
+| Método HTTP  | Endpoint                | Descrição                            |
+| ------------ | ----------------------- | ------------------------------------ |
+| GET          | `/funcionários`           | Retorna todos funcionários             |
+| GET          | `/nome`                 | Retorna residente específico por nome    
+| GET          | `//:id`          | Retorna funcionários específico por id      |
+| POST         | `//cadastrar`    | Cria/cadastra um funcionário novo           |
+| PUT          | `//:id`          | Altera informações de um funcionário      |
+| DELET        | `//:id`          | Remove um funcionário específico           |
+
+<br>
+
+## 🔃 Manipulação das Rotas de Responsáveis:
+
+| Método HTTP  | Endpoint                | Descrição                            |
+| ------------ | ----------------------- | ------------------------------------ |
+| GET          | `/responsáveis`           | Retorna todos responsáveis             |
+| GET          | `/nome`                 | Retorna responsável específico por nome    
+| GET          | `//:id`          | Retorna responsável específico por id      |
+| POST         | `//cadastrar`    | Cria/cadastra um responsável novo           |
+| PUT          | `//:id`          | Altera informações de um responsável       |
+| DELET        | `//:id`          | Remove um responsável específico           |
+
+<br>
+
+## 🔃 Manipulação das Rotas de Voluntários:
+
+| Método HTTP  | Endpoint                | Descrição                            |
+| ------------ | ----------------------- | ------------------------------------ |
+| GET          | `/responsáveis`           | Retorna todos voluntários             |
+| GET          | `/nome`                 | Retorna voluntário específico por nome    
+| GET          | `//:id`          | Retorna voluntário específico por id      |
+| POST         | `//cadastrar`    | Cria/cadastra um voluntário novo           |
+| PUT          | `//:id`          | Altera informações de um voluntário       |
+| DELET        | `//:id`          | Remove um voluntário específico           |
+
+<br>
+
+## 🔃 Manipulação das Rotas de Visitantes:
+
+| Método HTTP  | Endpoint                | Descrição                            |
+| ------------ | ----------------------- | ------------------------------------ |
+| GET          | `/visitantes`           | Retorna todos voluntários             |
+| GET          | `/nome`                 | Retorna visitante específico por nome    
+| GET          | `//:id`          | Retorna visitante específico por id      |
+| POST         | `//cadastrar`    | Cria/cadastra um visitante novo           |
+| PUT          | `//:id`          | Altera informações de um visitante       |
+| DELET        | `//:id`          | Remove um visitante específico           |
+
+<br>
+
+## **Teste Manual**
+
+Demonstração das etapas do CRUD , realizada no <a href="https://www.postman.com/">Postman</a>:
+
+Get /All -
+<h1 align="center">
+  <img src="./assets/gifgetAll.gif" width="900">
+<p align="center"><p>
+</h1>
+
+Get /nome - 
+<h1 align="center">
+  <img src="./assets/getbyname.gif" width="900">
+<p align="center"><p>
+</h1>
+
+Get /ById - 
+<h1 align="center">
+  <img src="./assets/get-by-id.gif" width="900">
+<p align="center"><p>
+</h1>
+
+Post /cadastrar - 
+<h1 align="center">
+  <img src="./assets/gifpost.gif" width="900">
+<p align="center"><p>
+</h1>
+
+Put /update/id - 
+<h1 align="center">
+  <img src="./assets/gifput.gif" width="900">
+<p align="center"><p>
+</h1>
+
+Delet /delte/id - 
+<h1 align="center">
+  <img src="./assets/gifdelete.gif" width="900">
+<p align="center"><p>
+</h1>
+
+<br>
+
+## 📌 **Melhorias Futuras**
+
+<br>
+
+* Criar dependência entre Responsável e Residente por meio do Id.
+* Criar segurança por meio de login para acesso a lista de dados. 
+
+Esse projeto está em construção 🚧, caso você tenha uma sugestão de melhorias para ele, ela será bem vinda! 🌼
+
+<br>
+
+## 📑 **Referências**
+
+<h3>
+
+> <a href="https://www.alura.com.br/artigos/escrever-bom-readme?utm_source=ActiveCampaign&utm_medium=email&utm_content=Portf%C3%B3lio%2C+Empregos+e+Aprendizagem&utm_campaign=%5BIMERS%C3%95ES%5D+%28Newsletter%29+%2338&vgo_ee=oGslBA5OCYzH0ORk0CMq9WqikUYh8M8BxFvwW49kncI%3D">Como escrever um README incrível no seu Github</p></a>
+
+ > <a href="https://github.com/elisabetealves/reprograma-estante-de-historias"><p align="">Inspiração Readme - Elisabete Alves</p></a>
+
+  > <a href="https://github.com/priscilaestevao/pretitudes-project-reprograma"><p align="">Inspiração Readme - Priscila Estevão </p></a> 
+
+  > <a href="https://github.com/xeniabarreto/FarmaBem.git"><p align="">Inspiração Readme - Xênia Barreto </p></a> 
+
+</h3>
+
+<br>
+
+### Autora
+<br>
+
+<h1 align="center">
+  <img src="./assets/fotokamila.jpeg" width="200">
+<p align="center"><p>
+</h1>
+
+<br>
+Kamila Lima 
+🧡 
+<br>
+
+  <div>
+    <a href="https://www.linkedin.com/in/kamila-lima-14299b150/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>  
+  <a href = "https://github.com/kamilaaliima"><img src="https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a>
+   <a href = "mailto:kamilalimame@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+   
+ </div>
+  
 
 <br>
 
 
-## 🚧 Projeto em Construção (futuras melhorias)
-
-<br>
-
-### Minhas Redes
-
-- [LinkedIn](gfhgh)
-- [GitHub]()
-
-###  💜 
- 
-<br> 
-    
-## 📝 Licença
-
-Este projeto esta sob a licença [MIT](./LICENSE).
-    
     
     
