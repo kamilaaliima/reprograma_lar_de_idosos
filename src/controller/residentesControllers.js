@@ -27,14 +27,18 @@ const getAll = async (request, response) => {
     }
 }
 
-const getByName = async (request, response) =>{
-    const nome = request.query.nome;
-    await Residentes.find({nome: nome})
 
-    return response.status(200).send(Residentes)
+
+const pesquisarPorNome = async (request, response) =>{
+    
+        
+        const nome = request.query.nome
+        const residente = await Residentes.find(nome)
+
+        return response.status(200).json(residente)
+
+
 }
-
-
 
 const getById = async (request, response) => {
     try {
@@ -52,16 +56,32 @@ const getById = async (request, response) => {
     }
 }
 
-const updateById = async (request, response) => {
-    try {
-        const { id } = request.params
-        const body = request.body
-        const update = { new: true }
 
-        const residente = await Residentes.findByIdAndUpdate(id, body, update)
-        return response.status(200).send(residente)
-    }catch (error) {
-        return response.status(404).send({message: "Residente não encontrado"})
+const alterarResidente = async (request, response) => {
+    try {
+        const residente = await Residentes.findById(request.params.id);
+        if (residente) {
+          
+            residente.nome = request.body.nome || residente.nome
+            residente.idade = request.body.idade || residente.idade
+            residente.rg = request.body.rg || residente.rg
+            residente.cpf = request.body.cpf || residente.cpf
+            residente.responsavel = request.body.responsavel || residente.responsavel
+            residente.dataDeInclusao = request.body.dataDeInclusao || residente.dataDeInclusao
+                     
+
+            const saveResidente = await residente.save();
+            response.status(200).json({
+                message: "Usuário atualizado com sucesso",
+                saveResidente
+            })
+        }
+
+        response.status(400).json({
+            mensagem: "Descupa, mas não conseguimos encontrar esse usuário"
+        })
+    } catch (error) {
+        return response.status(404).send({ message: error.message });
     }
 }
 
@@ -86,8 +106,8 @@ const deleteById = async (request, response) => {
 module.exports = {
     cadastrarResidentes,
     getAll,
-    getByName,
+    pesquisarPorNome,
     getById,
-    updateById,
+    alterarResidente,
     deleteById
 }

@@ -9,7 +9,7 @@ router.get("/:id", controller.getById)
 
 router.post("/cadastrar", controller.cadastrarVoluntarios)
 
-router.put("/update/:id", controller.updateById)
+router.put("/update/:id", controller.atualizarVoluntario)
 
 router.delete("/delete/:id", controller.deleteById)
 

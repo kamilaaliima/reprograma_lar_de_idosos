@@ -3,15 +3,15 @@ const router = express.Router();
 
 const controller = require("../controller/visitantesControllers")
 
-router.get("/all", controller.getAll)
-router.get("/nome", controller.getByName)
-router.get("/:id", controller.getById)
+router.get("/visitante/all", controller.getAll)
+router.get("/visitante/nome", controller.getByName)
+router.get("/visitante/:id", controller.getById)
 
-router.post("/cadastrar", controller.cadastrarVisitantes)
+router.post("/visitante/cadastrar", controller.cadastrarVisitantes)
 
-router.put("/update/:id", controller.updateById)
+router.put("/visitante/update/:id", controller.updateById)
 
-router.delete("/delete/:id", controller.deleteById)
+router.delete("/visitante/delete/:id", controller.deleteById)
 
 
 

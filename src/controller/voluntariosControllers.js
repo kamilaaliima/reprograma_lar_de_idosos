@@ -29,9 +29,9 @@ const getAll = async (request, response) => {
 
 const getByName = async (request, response) =>{
     const nome = request.query.nome;
-    await Voluntarios.find({nome: nome})
+    const voluntario = await Voluntarios.find({nome: nome})
 
-    return response.status(200).send(Voluntarios)
+    return response.status(200).send(voluntario)
 }
 
 
@@ -51,16 +51,31 @@ const getById = async (request, response) => {
     }
 }
 
-const updateById = async (request, response) => {
+const atualizarVoluntario = async (request, response) => {
     try {
-        const { id } = request.params
-        const body = request.body
-        const update = { new: true }
+        const voluntario = await Voluntarios.findById(request.params.id);
+        if (voluntario) {
+          
+            voluntario.nome = request.body.nome || voluntario.nome
+            voluntario.rg = request.body.rg || voluntario.rg
+            voluntario.email = request.body.email || voluntario.email
+            voluntario.numero = request.body.numero || voluntario.numero
+            voluntario.endereco = request.body.endereco || voluntario.endereco
+            voluntario.ultimaVisita = request.body.ultimaVisita || voluntario.ultimaVisita
+           
 
-        const voluntario = await Voluntarios.findByIdAndUpdate(id, body, update)
-        return response.status(200).send(voluntario)
-    }catch (error) {
-        return response.status(404).send({message: "Voluntário não encontrado"})
+            const saveVoluntario = await voluntario.save();
+            response.status(200).json({
+                message: "Usuário atualizado com sucesso",
+                saveVoluntario
+            })
+        }
+
+        response.status(400).json({
+            mensagem: "Descupa, mas não conseguimos encontrar esse usuário"
+        })
+    } catch (error) {
+        return response.status(404).send({ message: error.message });
     }
 }
 
@@ -87,6 +102,6 @@ module.exports = {
     getAll,
     getByName,
     getById,
-    updateById,
+    atualizarVoluntario,
     deleteById
 }

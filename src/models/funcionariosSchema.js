@@ -1,11 +1,8 @@
 const mongoose = require("mongoose");
 
 const funcionariosSchema = new mongoose.Schema({
-    _id: {
-        type: mongoose.Schema.Types.ObjectId,
-        auto: true,
-        required: true
-    },
+    id: mongoose.Schema.Types.ObjectId,
+
     nome: {
         type: String,
         required: true
@@ -30,18 +27,18 @@ const funcionariosSchema = new mongoose.Schema({
     },
     numero:{
         type: String,
-        unique: true,
+        
         required:true, 
         lowercase: true
     },
-    endereço: {
+    endereco: {
         type: String,
         required: true
     },
     dataDeInclusao: {
-        type: Date,
-        required: true,
-        default: new Date
+        type: String,
+        required: true
+    
     },
     horarios: {
         type: String,
@@ -51,4 +48,4 @@ const funcionariosSchema = new mongoose.Schema({
 
 });
 
-module.exports = mongoose.model("funcionarios", funcionariosSchema)
+module.exports = mongoose.model("funcionario", funcionariosSchema)

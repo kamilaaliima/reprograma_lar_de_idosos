@@ -1,5 +1,5 @@
 const Visitantes = require("../models/visitantesSchema");
-const mongoose = require("mongoose");
+
 
 const cadastrarVisitantes = async (request, response) => {
     try {
@@ -17,6 +17,7 @@ const cadastrarVisitantes = async (request, response) => {
 
 const getAll = async (request, response) => {
     try {
+        console.log("chegou");
         const visitante = await Visitantes.find()
         return response.status(200).json(visitante)
 
@@ -29,9 +30,9 @@ const getAll = async (request, response) => {
 
 const getByName = async (request, response) =>{
     const nome = request.query.nome;
-    await Visitantes.find({nome: nome})
+    const visitantes = await Visitantes.find({nome: nome})
 
-    return response.status(200).send(Visitantes)
+    return response.status(200).send(visitantes)
 }
 
 
@@ -53,14 +54,28 @@ const getById = async (request, response) => {
 
 const updateById = async (request, response) => {
     try {
-        const { id } = request.params
-        const body = request.body
-        const update = { new: true }
+        const visitantes = await Visitantes.findById(request.params.id);
+        if (visitantes) {
+          
+            visitantes.nome = request.body.nome || visitantes.nome
+            visitantes.rg = request.body.rg || visitantes.rg
+            visitantes.email = request.body.email || visitantes.email
+            visitantes.numero = request.body.numero || visitantes.numero
+            visitantes.endereco = request.body.endereco || visitantes.endereco
+           
 
-        const visitante = await Visitantes.findByIdAndUpdate(id, body, update)
-        return response.status(200).send(visitante)
-    }catch (error) {
-        return response.status(404).send({message: "Visitante não encontrado!"})
+            const saveVisitante = await visitantes.save();
+            response.status(200).json({
+                message: "Usuário atualizado com sucesso",
+                saveVisitante
+            })
+        }
+
+        response.status(400).json({
+            mensagem: "Descupa, mas não conseguimos encontrar esse usuário"
+        })
+    } catch (error) {
+        return response.status(404).send({ message: error.message });
     }
 }
 

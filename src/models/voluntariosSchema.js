@@ -1,11 +1,7 @@
 const mongoose = require("mongoose"); 
 
 const voluntariosSchema = new mongoose.Schema({
-    _id: {
-        type: mongoose.Schema.Types.ObjectId,
-        auto: true,
-        required: true
-    },
+    id: mongoose.Schema.Types.ObjectId,
     nome: {
         type: String,
         required: true
@@ -31,9 +27,8 @@ const voluntariosSchema = new mongoose.Schema({
         required: true
     },
     ultimaVisita: {
-        type: Date,
-        required: true,
-        default: new Date
+        type: String,
+        required: true
     }
 
 

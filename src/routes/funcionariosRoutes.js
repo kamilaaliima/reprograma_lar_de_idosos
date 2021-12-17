@@ -3,15 +3,15 @@ const router = express.Router();
 
 const controller = require("../controller/funcionariosControllers")
 
-router.get("/all", controller.getAll)
-router.get("/nome", controller.getByName)
-router.get("/:id", controller.getById)
+router.get("/funcionarios/all", controller.getAll)
+router.get("/funcionarios/nome", controller.getByName)
+router.get("/funcionarios/:id", controller.getById)
 
-router.post("/cadastrar", controller.cadastrarFuncionario)
+router.post("/funcionarios/cadastrar", controller.cadastrarFuncionario)
 
-router.put("/update/:id", controller.updateById)
+router.put("/funcionarios/update/:id", controller.atualizarFuncionario)
 
-router.delete("/delete/:id", controller.deleteById)
+router.delete("funcionarios/delete/:id", controller.deleteById)
 
 
 

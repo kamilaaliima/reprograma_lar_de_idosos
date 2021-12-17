@@ -1,11 +1,8 @@
 const mongoose = require("mongoose"); 
 
 const responsaveisSchema = new mongoose.Schema({
-    _id: {
-        type: mongoose.Schema.Types.ObjectId,
-        auto: true,
-        required: true
-    },
+    id: mongoose.Schema.Types.ObjectId,
+
     nome: {
         type: String,
         required: true
@@ -30,7 +27,7 @@ const responsaveisSchema = new mongoose.Schema({
         required:true, 
         lowercase: true
     },
-    endereço: {
+    endereco: {
         type: String,
         required: true
     },

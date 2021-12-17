@@ -1,7 +1,7 @@
 const Responsaveis = require("../models/responsaveisSchema");
 
 
-const cadastrarResponsaveis = async (request, response) => {
+const cadastrarResponsavel = async (request, response) => {
     try {
         const responsavel = await Responsaveis.create(request.body)
         return response.status(201).json({
@@ -26,6 +26,13 @@ const getAll = async (request, response) => {
     }
 }
 
+const getByName = async (request, response) =>{
+    const nome = request.query.nome;
+    const responsavel = await Responsaveis.find({nome: nome})
+
+    return response.status(200).send(responsavel)
+}
+
 
 const getById = async (request, response) => {
     try {
@@ -44,16 +51,31 @@ const getById = async (request, response) => {
 }
 
 
-const updateById = async (request, response) => {
+const atualizarResponsavel = async (request, response) => {
     try {
-        const { id } = request.params
-        const body = request.body
-        const update = { new: true }
+        const responsavel = await Responsaveis.findById(request.params.id);
+        if (responsavel) {
+          
+            responsavel.nome = request.body.nome || responsavel.nome
+            responsavel.cpf = request.body.cpf || responsavel.cpf
+            responsavel.rg = request.body.rg || responsavel.rg
+            responsavel.email = request.body.email || responsavel.email
+            responsavel.numero = request.body.numero || responsavel.numero
+            responsavel.endereco = request.body.endereco || responsavel.endereco
+           
 
-        const responsavel = await Responsaveis.findByIdAndUpdate(id, body, update)
-        return response.status(200).send(responsavel)
-    }catch (error) {
-        return response.status(404).send({message: "Responsável não encontrado"})
+            const saveResponsavel = await responsavel.save();
+            response.status(200).json({
+                message: "Usuário atualizado com sucesso",
+                saveResponsavel
+            })
+        }
+
+        response.status(400).json({
+            mensagem: "Descupa, mas não conseguimos encontrar esse usuário"
+        })
+    } catch (error) {
+        return response.status(404).send({ message: error.message });
     }
 }
 
@@ -76,9 +98,10 @@ const deleteById = async (request, response) => {
 
 
 module.exports = {
-    cadastrarResponsaveis,
+    cadastrarResponsavel,
     getAll,
+    getByName,
     getById,
-    updateById,
+    atualizarResponsavel,
     deleteById
 }
