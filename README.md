@@ -263,13 +263,13 @@ Get /All -
 
 Get /nome - 
 <h1 align="center">
-<img src="./assets/getbyname.gif" width="800%">
+<img src="./assets/getByName.gif" width="800%">
 <p align="center"><p>
 </h1>
 
 Get /ById - 
 <h1 align="center">
-<img src="./assets/get-by-id.gif" width="800%">
+<img src="./assets/getById.gif" width="800%">
 <p align="center"><p>
 </h1>
 
