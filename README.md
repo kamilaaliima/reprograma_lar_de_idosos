@@ -1,7 +1,7 @@
 <h1 align="center"> Reprograma - projeto para Lar de Idosos </h1>
 
 
-<img src="./src/assets/casacanva1.png" width="100%">
+<img src="./assets/casacanva1.png" width="600"height=600"/>
 
 
 ## Sumário  
@@ -327,15 +327,17 @@ Esse projeto está em construção 🚧, caso você tenha uma sugestão de melho
 <br>
 
 <h1 align="center">
-  <img src="./assets/fotokamila.jpeg" width="100"height=100"/>
+  <img src="./assets/fotokamila.jpeg" width="300"height=300"/>
 </h1>
 
 <br>
 
+<br>
 </h1>
-Kamila Lima 
-🧡 
+Kamila Lima 🧡 
 </h1>
+<br>
+
 
 <br>
 
