@@ -327,12 +327,16 @@ Esse projeto está em construção 🚧, caso você tenha uma sugestão de melho
 <br>
 
 <h1 align="center">
-  <img src="./src/assets/fotokamila.jpeg" width="200%">
+  <img src="./src/assets/fotokamila.jpeg" width="100%">
 </h1>
 
 <br>
+
+</h1>
 Kamila Lima 
 🧡 
+</h1>
+
 <br>
 
   <div>
