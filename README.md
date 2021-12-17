@@ -260,37 +260,37 @@ Demonstração das etapas do CRUD , realizada no <a href="https://www.postman.co
 
 Get /All -
 <h1 align="center">
-  <img src="./assets/gifgetAll.gif" width="900">
+<img src="./src/assets/gifgetAll.gif" width="800%">
 <p align="center"><p>
 </h1>
 
 Get /nome - 
 <h1 align="center">
-  <img src="./assets/getbyname.gif" width="900">
+<img src="./src/assets/getbyname.gif" width="800%">
 <p align="center"><p>
 </h1>
 
 Get /ById - 
 <h1 align="center">
-  <img src="./assets/get-by-id.gif" width="900">
+<img src="./src/assets/get-by-id.gif" width="800%">
 <p align="center"><p>
 </h1>
 
 Post /cadastrar - 
 <h1 align="center">
-  <img src="./assets/gifpost.gif" width="900">
+<img src="./src/assets/gifpost.gif" width="800%">
 <p align="center"><p>
 </h1>
 
 Put /update/id - 
 <h1 align="center">
-  <img src="./assets/gifput.gif" width="900">
+<img src="./src/assets/gifput.gif" width="800%">
 <p align="center"><p>
 </h1>
 
 Delet /delte/id - 
 <h1 align="center">
-  <img src="./assets/gifdelete.gif" width="900">
+<img src="./src/assets/gifdelete.gif" width="800%">
 <p align="center"><p>
 </h1>
 
@@ -327,7 +327,7 @@ Esse projeto está em construção 🚧, caso você tenha uma sugestão de melho
 <br>
 
 <h1 align="center">
-  <img src="./src/assets/fotokamila.jpeg" width="100%">
+  <img src="./src/assets/fotokamila.jpeg" width="200%">
 </h1>
 
 <br>
