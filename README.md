@@ -327,8 +327,7 @@ Esse projeto está em construção 🚧, caso você tenha uma sugestão de melho
 <br>
 
 <h1 align="center">
-  <img src="./assets/fotokamila.jpeg" width="200">
-<p align="center"><p>
+  <img src="./src/assets/fotokamila.jpeg" width="100%">
 </h1>
 
 <br>
