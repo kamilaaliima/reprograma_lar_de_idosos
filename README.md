@@ -171,7 +171,7 @@ Esta API está sendo escutada na `porta 8084`.
 * Local: http://localhost:8084 - (rodando localmente)
 
 * Heroku: https://reprograma-lar-de-idoso.herokuapp.com/- (consumir API)
-* Heroku:
+
 
     * Utilize o [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/download/) para para chamar e testar os endpoints da API localmente ou via Heroku
 
@@ -242,7 +242,7 @@ Esta API está sendo escutada na `porta 8084`.
 
 | Método HTTP  | Endpoint                | Descrição                            |
 | ------------ | ----------------------- | ------------------------------------ |
-| GET          | `/visitantes`           | Retorna todos voluntários             |
+| GET          | `/visitantes`           | Retorna todos visitantes             |
 | GET          | `/nome`                 | Retorna visitante específico por nome    
 | GET          | `//:id`          | Retorna visitante específico por id      |
 | POST         | `//cadastrar`    | Cria/cadastra um visitante novo           |
